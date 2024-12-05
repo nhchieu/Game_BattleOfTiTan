@@ -3,28 +3,36 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] public float speed;
+    [Header("# Enemy Info")]
+    public float speed;
     public float health;
     public float maxHealth;
+
+    [Header("# Enemy control")]
     public RuntimeAnimatorController[] animCon;
-    [SerializeField] Rigidbody2D target;
+    public Rigidbody2D target;
     [SerializeField] bool islive;
+    
     Rigidbody2D rigid;
     SpriteRenderer spriter;
     Animator animator;
-    WaitForFixedUpdate wait;
+    WaitForSeconds wait=new WaitForSeconds(1);
     Collider2D coll;
-
+    
     private void Awake()
     {
+
         rigid = GetComponent<Rigidbody2D>();
         spriter = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
-        wait = new WaitForFixedUpdate();
         coll = GetComponent<Collider2D>();
+        
     }
     private void FixedUpdate()
     {
+        if (!GameManager.instance.isLive)
+            return;
+
         Vector2 dirVec = target.position - rigid.position;//vector chỉ hướng từ enemy đến player
 
         Vector2 nextVec = dirVec.normalized * speed * Time.deltaTime;
@@ -39,6 +47,9 @@ public class Enemy : MonoBehaviour
     }
     private void LateUpdate()
     {
+        if (!GameManager.instance.isLive)
+            return;
+
         spriter.flipX = target.position.x<rigid.position.x;
     }
 
@@ -63,13 +74,18 @@ public class Enemy : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!collision.CompareTag("Bullet"))
+        if (!collision.CompareTag("Bullet") || !islive)
         {
             return;
         }
+        // đẩy lùi quái
 
-        health-= collision.GetComponent<Bullet>().damage;
-        KnockBack();
+        //Vector3 Vec = dirVec.normalized; 
+        //transform.Translate(Vec);
+        StartCoroutine(KnockBack());
+
+        health -= collision.GetComponent<Bullet>().damage;
+        
 
         if(health > 0)
         {
@@ -82,22 +98,23 @@ public class Enemy : MonoBehaviour
             rigid.simulated= false;
             spriter.sortingOrder = 1;
             animator.SetBool("Dead",true);
-            Dead();
-            
+            StartCoroutine(Dead());
+            GameManager.instance.kill++;
+            GameManager.instance.GetExp();
         }
     }
-        void KnockBack()
+     IEnumerator KnockBack()
     {
-        
         Vector3 playerPos = GameManager.instance.player.transform.position;
         Vector3 dirVec = transform.position - playerPos;
-        rigid.AddForce(dirVec.normalized * 3, ForceMode2D.Impulse);
-
+        transform.Translate(dirVec.normalized*0.2f);
+        yield return wait;
     } 
-    void Dead()
+    IEnumerator Dead()
     {
-
+        yield return wait;
         gameObject.SetActive(false);
+       
     }
 }
     

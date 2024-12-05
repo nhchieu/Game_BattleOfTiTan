@@ -1,43 +1,43 @@
-﻿using UnityEngine;
+﻿using System.ComponentModel;
+using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-
+    [Header("# Player Info")]
     public Vector2 inputVec;
-    [SerializeField] float speed = 4f;
+    public float speed = 7f;
+    public float maxHealth = 100;
+    public float Health;
+    
+    [Header("# Player Control")]
     float horizontal_input;
     float vertical_input;
     public Scanner scanner;
     SpriteRenderer spriter;
     Rigidbody2D rigid;
     Animator animator;
-    
+
     private void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
         spriter=GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         scanner=GetComponent<Scanner>();
+        Health=maxHealth;
     }
     void Update()
     {
-        //// Lấy input từ bàn phím
-        //horizontal_input = Input.GetAxisRaw("Horizontal"); // A (-1) / D (1)
-        //vertical_input = Input.GetAxisRaw("Vertical"); // W (1) / S (-1)
-        //// Tạo vector di chuyển trên mặt phẳng X0Y
-        //Vector3 moveDirection = new Vector3(horizontal_input, vertical_input, 0f).normalized;
-        //// Di chuyển nhân vật
-        //transform.Translate(moveDirection * speed * Time.deltaTime, Space.World);
+        if(!GameManager.instance.isLive)
+            return;
 
         inputVec.x = Input.GetAxisRaw("Horizontal");
         inputVec.y = Input.GetAxisRaw("Vertical");
-
-
-
-
     }
     private void FixedUpdate()
     {
+        if (!GameManager.instance.isLive)
+            return;
+
         Vector2 nextVec =inputVec.normalized*speed*Time.fixedDeltaTime;
         rigid.MovePosition(rigid.position+ nextVec); 
 
@@ -45,6 +45,9 @@ public class Player : MonoBehaviour
 
     private void LateUpdate()
     {
+        if (!GameManager.instance.isLive)
+            return;
+
         if (inputVec.magnitude > 0)
         {
             animator.SetFloat("Speed", inputVec.magnitude);
@@ -59,5 +62,24 @@ public class Player : MonoBehaviour
            spriter.flipX = inputVec.x < 0;
 
         }
+    }
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (!GameManager.instance.isLive)
+        {
+            return;
+        }
+        Health -=Time.deltaTime* 10;
+
+        if (Health < 0)
+        {
+            for (int i = 2; i < transform.childCount; i++) { 
+                transform.GetChild(i).gameObject.SetActive(false);
+            }
+            animator.SetTrigger("Dead");
+
+            
+        }
+
     }
 }

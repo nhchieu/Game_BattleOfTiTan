@@ -5,7 +5,7 @@ public class Spawner : MonoBehaviour
     public Transform[] spawPoint;
     public SpawnData[] spawnData;
     [SerializeField]float time=0;
-    int level;
+    public int level;
 
     private void Awake()
     {
@@ -13,10 +13,11 @@ public class Spawner : MonoBehaviour
     }
     void Update()
     {
-        time+= Time.deltaTime;
-        //Debug.Log(GameManager.instance.gameTime);
-        //level =Mathf.Min(Mathf.FloorToInt( GameManager.instance.gameTime / 10f),spawnData.Length-1) ;
-        level =Mathf.FloorToInt(GameManager.instance.gameTime / 10f);
+        if (!GameManager.instance.isLive)
+            return;
+
+        time += Time.deltaTime;
+        level =Mathf.FloorToInt(GameManager.instance.gameTime / 30f);
 
         if (time > spawnData[level].spawnTime )
         {
@@ -28,9 +29,14 @@ public class Spawner : MonoBehaviour
     {
         GameObject enemy = GameManager.instance.pool.Get(0);
         enemy.transform.position = spawPoint[Random.Range(1, spawPoint.Length)].position;
-        
         enemy.GetComponent<Enemy>().Init(spawnData[level]);
-        
+        if (level >= 2)
+        {
+            GameObject enemy1 = GameManager.instance.pool.Get(0);
+            enemy1.transform.position = spawPoint[Random.Range(1, spawPoint.Length)].position;
+            enemy1.GetComponent<Enemy>().Init(spawnData[level-2]);
+        }
+
     }
 }
 

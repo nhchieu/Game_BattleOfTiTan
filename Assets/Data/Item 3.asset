@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37dde6e5137022641bdec94ccd906f9f, type: 3}
+  m_Name: Item 3
+  m_EditorClassIdentifier: 
+  itemType: 3
+  itemId: 0
+  itemName: "Gi\xE0y"
+  itemDesc: "+{0} % T\u1ED1c \u0110\u1ED9 Di Chuy\u1EC3n"
+  itemIcon: {fileID: -4678890285897253091, guid: 7d24244b1e2ce504caf3966552777c45, type: 3}
+  baseDamage: 0
+  baseCount: 0
+  damages:
+  - 0.1
+  - 0.2
+  - 0.3
+  - 0.4
+  - 0.5
+  counts: 0000000000000000000000000000000000000000
+  projectile: {fileID: 0}
