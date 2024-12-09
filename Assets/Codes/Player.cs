@@ -77,6 +77,7 @@ public class Player : MonoBehaviour
                 transform.GetChild(i).gameObject.SetActive(false);
             }
             animator.SetTrigger("Dead");
+            GameManager.instance.GameOver();
 
             
         }

@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -12,6 +13,7 @@ public class GameManager : MonoBehaviour
     public PoolManager pool;
     public Player player;
     public LevelUp uilevelUp;
+    public GameObject uiResult;
     [Header("# Player Info")]
     public int level;
     public int kill;
@@ -61,8 +63,30 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
     }
 
+
+
+    public void GameStart()
+    {
+        isLive = true;
+        player.Health = player.maxHealth;
+        uilevelUp.Select(1);
+        Time.timeScale = 1;
+    }
     public void GameRetry()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(0);
+    }
+    
+    public void GameOver()
+    {
+        StartCoroutine(GameOverRoutine());
+    }
+
+    IEnumerator GameOverRoutine()
+    {
+        yield return new WaitForSeconds(0.5f);
+        isLive=false;
+        uiResult.SetActive(true);
+        Stop();
     }
 }
