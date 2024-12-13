@@ -3,16 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\nhchi\\Desktop\\BATTLE-OF-TITANS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{73278757-A23C-E255-C5CB-5FECB7B784D2}|Assembly-CSharp.csproj|C:\\Users\\nhchi\\Desktop\\BATTLE-OF-TITANS\\assets\\codes\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{73278757-A23C-E255-C5CB-5FECB7B784D2}|Assembly-CSharp.csproj|solutionrelative:assets\\codes\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{73278757-A23C-E255-C5CB-5FECB7B784D2}|Assembly-CSharp.csproj|c:\\users\\nhchi\\desktop\\battle-of-titans\\assets\\codes\\spawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{73278757-A23C-E255-C5CB-5FECB7B784D2}|Assembly-CSharp.csproj|solutionrelative:assets\\codes\\spawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{73278757-A23C-E255-C5CB-5FECB7B784D2}|Assembly-CSharp.csproj|c:\\users\\nhchi\\desktop\\battle-of-titans\\assets\\codes\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73278757-A23C-E255-C5CB-5FECB7B784D2}|Assembly-CSharp.csproj|solutionrelative:assets\\codes\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{73278757-A23C-E255-C5CB-5FECB7B784D2}|Assembly-CSharp.csproj|C:\\Users\\nhchi\\Desktop\\BATTLE-OF-TITANS\\assets\\codes\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{73278757-A23C-E255-C5CB-5FECB7B784D2}|Assembly-CSharp.csproj|solutionrelative:assets\\codes\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73278757-A23C-E255-C5CB-5FECB7B784D2}|Assembly-CSharp.csproj|c:\\users\\nhchi\\desktop\\battle-of-titans\\assets\\codes\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73278757-A23C-E255-C5CB-5FECB7B784D2}|Assembly-CSharp.csproj|solutionrelative:assets\\codes\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73278757-A23C-E255-C5CB-5FECB7B784D2}|Assembly-CSharp.csproj|C:\\Users\\nhchi\\Desktop\\BATTLE-OF-TITANS\\assets\\codes\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73278757-A23C-E255-C5CB-5FECB7B784D2}|Assembly-CSharp.csproj|solutionrelative:assets\\codes\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73278757-A23C-E255-C5CB-5FECB7B784D2}|Assembly-CSharp.csproj|C:\\Users\\nhchi\\Desktop\\BATTLE-OF-TITANS\\assets\\codes\\spawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73278757-A23C-E255-C5CB-5FECB7B784D2}|Assembly-CSharp.csproj|solutionrelative:assets\\codes\\spawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73278757-A23C-E255-C5CB-5FECB7B784D2}|Assembly-CSharp.csproj|c:\\users\\nhchi\\desktop\\battle-of-titans\\assets\\codes\\scanner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73278757-A23C-E255-C5CB-5FECB7B784D2}|Assembly-CSharp.csproj|solutionrelative:assets\\codes\\scanner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,42 +34,82 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Scanner.cs",
+              "DocumentMoniker": "C:\\Users\\nhchi\\Desktop\\BATTLE-OF-TITANS\\Assets\\Codes\\Scanner.cs",
+              "RelativeDocumentMoniker": "Assets\\Codes\\Scanner.cs",
+              "ToolTip": "C:\\Users\\nhchi\\Desktop\\BATTLE-OF-TITANS\\Assets\\Codes\\Scanner.cs",
+              "RelativeToolTip": "Assets\\Codes\\Scanner.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T08:26:05.865Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Player.cs",
+              "DocumentMoniker": "C:\\Users\\nhchi\\Desktop\\BATTLE-OF-TITANS\\Assets\\Codes\\Player.cs",
+              "RelativeDocumentMoniker": "Assets\\Codes\\Player.cs",
+              "ToolTip": "C:\\Users\\nhchi\\Desktop\\BATTLE-OF-TITANS\\Assets\\Codes\\Player.cs",
+              "RelativeToolTip": "Assets\\Codes\\Player.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAzwA4AAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T08:18:01.884Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Result.cs",
+              "DocumentMoniker": "C:\\Users\\nhchi\\Desktop\\BATTLE-OF-TITANS\\Assets\\Codes\\Result.cs",
+              "RelativeDocumentMoniker": "Assets\\Codes\\Result.cs",
+              "ToolTip": "C:\\Users\\nhchi\\Desktop\\BATTLE-OF-TITANS\\Assets\\Codes\\Result.cs",
+              "RelativeToolTip": "Assets\\Codes\\Result.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T08:09:07.478Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "GameManager.cs",
               "DocumentMoniker": "C:\\Users\\nhchi\\Desktop\\BATTLE-OF-TITANS\\Assets\\Codes\\GameManager.cs",
               "RelativeDocumentMoniker": "Assets\\Codes\\GameManager.cs",
               "ToolTip": "C:\\Users\\nhchi\\Desktop\\BATTLE-OF-TITANS\\Assets\\Codes\\GameManager.cs",
               "RelativeToolTip": "Assets\\Codes\\GameManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADYAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAABQAAAAAAAAAAAAAwGUAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-09T07:25:00.309Z"
+              "WhenOpened": "2024-12-09T07:25:00.309Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Enemy.cs",
               "DocumentMoniker": "C:\\Users\\nhchi\\Desktop\\BATTLE-OF-TITANS\\Assets\\Codes\\Enemy.cs",
               "RelativeDocumentMoniker": "Assets\\Codes\\Enemy.cs",
               "ToolTip": "C:\\Users\\nhchi\\Desktop\\BATTLE-OF-TITANS\\Assets\\Codes\\Enemy.cs",
               "RelativeToolTip": "Assets\\Codes\\Enemy.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAAwC4AAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAADcAAAAAAAAAAAAcwC4AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-09T07:13:39.435Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Spawner.cs",
               "DocumentMoniker": "C:\\Users\\nhchi\\Desktop\\BATTLE-OF-TITANS\\Assets\\Codes\\Spawner.cs",
               "RelativeDocumentMoniker": "Assets\\Codes\\Spawner.cs",
               "ToolTip": "C:\\Users\\nhchi\\Desktop\\BATTLE-OF-TITANS\\Assets\\Codes\\Spawner.cs",
               "RelativeToolTip": "Assets\\Codes\\Spawner.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-09T07:56:18.324Z",
               "EditorCaption": ""

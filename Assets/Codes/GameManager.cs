@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     public PoolManager pool;
     public Player player;
     public LevelUp uilevelUp;
-    public GameObject uiResult;
+    public Result uiResult;
     [Header("# Player Info")]
     public int level;
     public int kill;
@@ -40,7 +40,14 @@ public class GameManager : MonoBehaviour
         {
             gameTime = maxGameTime;
         }
+
+        if(gameTime==maxGameTime && player.scanner.nearestTarget == null)
+        {
+            GameWin();
+        }
     }
+
+
     public void GetExp()
     {
         exp++;
@@ -62,9 +69,6 @@ public class GameManager : MonoBehaviour
         isLive = true;
         Time.timeScale = 1;
     }
-
-
-
     public void GameStart()
     {
         isLive = true;
@@ -76,17 +80,28 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(0);
     }
-    
     public void GameOver()
     {
         StartCoroutine(GameOverRoutine());
+    }
+    public void GameWin()
+    {
+        StartCoroutine (GameWinRoutine());
     }
 
     IEnumerator GameOverRoutine()
     {
         yield return new WaitForSeconds(0.5f);
         isLive=false;
-        uiResult.SetActive(true);
+        uiResult.gameObject.SetActive(true);
+        uiResult.Lose();
+        Stop();
+    }
+    IEnumerator GameWinRoutine()
+    {
+        yield return new WaitForSeconds(3f);
+        uiResult.gameObject.SetActive(true);
+        uiResult.Win();
         Stop();
     }
 }

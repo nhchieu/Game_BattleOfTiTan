@@ -24,6 +24,8 @@ public class Spawner : MonoBehaviour
             time = 0;
             spawn();
         }
+
+       
     }
     void spawn()
     {

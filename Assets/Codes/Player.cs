@@ -29,7 +29,6 @@ public class Player : MonoBehaviour
     {
         if(!GameManager.instance.isLive)
             return;
-
         inputVec.x = Input.GetAxisRaw("Horizontal");
         inputVec.y = Input.GetAxisRaw("Vertical");
     }
@@ -37,12 +36,9 @@ public class Player : MonoBehaviour
     {
         if (!GameManager.instance.isLive)
             return;
-
         Vector2 nextVec =inputVec.normalized*speed*Time.fixedDeltaTime;
         rigid.MovePosition(rigid.position+ nextVec); 
-
     }
-
     private void LateUpdate()
     {
         if (!GameManager.instance.isLive)
@@ -56,8 +52,6 @@ public class Player : MonoBehaviour
         {
             animator.SetFloat("Speed", inputVec.magnitude);
         }
-
-
         if (inputVec.x != 0) { 
            spriter.flipX = inputVec.x < 0;
 
@@ -78,8 +72,6 @@ public class Player : MonoBehaviour
             }
             animator.SetTrigger("Dead");
             GameManager.instance.GameOver();
-
-            
         }
 
     }
