@@ -20183,10 +20183,10 @@ MonoBehaviour:
     spriteType: 2
     health: 40
     speed: 3
-  - spawnTime: 0.045
-    spriteType: 2
-    health: 100
-    speed: 4
+  - spawnTime: 1
+    spriteType: 3
+    health: 5000
+    speed: 6
   - spawnTime: 0.19
     spriteType: 2
     health: 40
