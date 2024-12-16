@@ -39,18 +39,15 @@ public class Weapon : MonoBehaviour
                 timer += Time.deltaTime;
                 if(timer > speed)
                 {
-                    timer=0f;
-                    Fire1();
+                   timer=0f;
+                   Fire1();
                 }
                 break;
             default:
                 break;
         }
 
-        if (Input.GetMouseButtonDown(1))
-        {
-            levelUp(5, 1);
-        }
+        
     }
     public void levelUp(float damage, int count)
     {
@@ -94,7 +91,7 @@ public class Weapon : MonoBehaviour
                 break;
 
             case 2:
-                speed = 10;
+                speed = 5f;
                 break;  
             default:
                 
@@ -146,6 +143,20 @@ public class Weapon : MonoBehaviour
     }
     void Fire1()
     {
-       
+        if (!player.scanner.nearestTarget)
+        {
+            return;
+        }
+        Vector3 targetPos = player.scanner.nearestTarget.position;
+        Vector3 dir = targetPos - transform.position;
+        dir = dir.normalized;
+
+        Transform bullet = GameManager.instance.pool.Get(prefabId).transform;
+        bullet.position = transform.position;
+        bullet.Rotate(0, 0, 90f);
+        Vector3 scale = new Vector3(9f, 9f, 9f);
+        bullet.localScale=scale;
+        bullet.rotation = Quaternion.FromToRotation(Vector3.up, dir);
+        bullet.GetComponent<Bullet>().Init(damage, count, dir);
     }
 }

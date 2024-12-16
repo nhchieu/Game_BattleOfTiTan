@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 7
-  per: 0
+  per: 2
 --- !u!61 &-5658116188206302530
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -164,7 +164,7 @@ BoxCollider2D:
   m_Offset: {x: 0.005000025, y: 0.32}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.49090907, y: -0.051724136}
+    pivot: {x: 0.4963301, y: 0.4906182}
     oldSize: {x: 0.55, y: 0.58}
     newSize: {x: 0.55, y: 0.58}
     adaptiveTilingThreshold: 0.5
