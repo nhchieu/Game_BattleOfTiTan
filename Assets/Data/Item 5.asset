@@ -16,14 +16,14 @@ MonoBehaviour:
   itemId: 2
   itemName: "Phi ti\xEAu "
   itemDesc: "Phi ti\xEAu kh\xF4ng th\u1EC3 b\u1ECB ng\u0103n c\u1EA3n"
-  itemIcon: {fileID: -6795786608348309970, guid: 94c094ae2927a67448d22eddb0c9927d, type: 3}
+  itemIcon: {fileID: -1554072860450086572, guid: cac3361052d0ed04cb51dec7b836206b, type: 3}
   baseDamage: 40
-  baseCount: 50
+  baseCount: 100
   damages:
-  - 0.1
   - 0.2
-  - 0.3
-  - 0.4
-  - 0.5
+  - 0.2
+  - 0.2
+  - 0.2
+  - 0.2
   counts: 0000000000000000000000000000000000000000
   projectile: {fileID: 5530036356438238059, guid: 52d736aca80d14b48862f7332525fd5f, type: 3}

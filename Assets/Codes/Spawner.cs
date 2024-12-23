@@ -37,6 +37,7 @@ public class Spawner : MonoBehaviour
         }
         else
         {
+            
             GameObject enemy1 = GameManager.instance.pool.Get(0);
             enemy1.transform.position = spawPoint[Random.Range(1, spawPoint.Length)].position;
             Vector3 newScale = enemy1.transform.localScale * 4f; // tang scale

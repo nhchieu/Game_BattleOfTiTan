@@ -12,13 +12,17 @@ public class Weapon : MonoBehaviour
     float timer;
     Player player;
     Enemy enemy;
+    
     private void Awake()
     {
         player = GameManager.instance.player;
         
+        
+
     }
     void Update()
     {
+        
         if (!GameManager.instance.isLive)
             return;
 
@@ -138,6 +142,7 @@ public class Weapon : MonoBehaviour
         bullet.position = transform.position;
         bullet.Rotate(0, 0, 90f);
         bullet.rotation = Quaternion.FromToRotation(Vector3.up, dir);
+        AudioManager.instance.sfx(0);
         bullet.GetComponent<Bullet>().Init(damage, count, dir);
         
     }

@@ -9,11 +9,15 @@ public class GameManager : MonoBehaviour
     public bool isLive;
     public float gameTime;
     public float maxGameTime;
+    public float bgmMenuVolume;
+    public float bgmBattleVolume;
     [Header("# GameObject")]
     public PoolManager pool;
     public Player player;
     public LevelUp uilevelUp;
     public Result uiResult;
+    public Enemy enemy;
+    
     [Header("# Player Info")]
     public int level;
     public int kill;
@@ -23,11 +27,14 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
+        AudioManager.instance.BgmOn(0, bgmMenuVolume); 
+        
     }
 
     private void Start()
     {
         uilevelUp.Select(1);
+        
     }
     private void Update()
     {
@@ -75,6 +82,7 @@ public class GameManager : MonoBehaviour
         player.Health = player.maxHealth;
         uilevelUp.Select(1);
         Time.timeScale = 1;
+        AudioManager.instance.BgmOn(1, bgmBattleVolume);
     }
     public void GameRetry()
     {
@@ -95,6 +103,8 @@ public class GameManager : MonoBehaviour
         isLive=false;
         uiResult.gameObject.SetActive(true);
         uiResult.Lose();
+        AudioManager.instance.sfx(4);
+        AudioManager.instance.PauseMusic();
         Stop();
     }
     IEnumerator GameWinRoutine()
@@ -102,6 +112,14 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(3f);
         uiResult.gameObject.SetActive(true);
         uiResult.Win();
+        AudioManager.instance.sfx(5);
+        AudioManager.instance.PauseMusic();
         Stop();
+    }
+    
+    public void QuitGame()
+    {
+        Application.Quit();
+        UnityEditor.EditorApplication.isPlaying = false;
     }
 }

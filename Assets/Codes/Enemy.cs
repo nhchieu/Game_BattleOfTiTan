@@ -19,6 +19,7 @@ public class Enemy : MonoBehaviour
     WaitForSeconds wait=new WaitForSeconds(1);
     Collider2D coll;
     
+    
     private void Awake()
     {
 
@@ -26,6 +27,7 @@ public class Enemy : MonoBehaviour
         spriter = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         coll = GetComponent<Collider2D>();
+        
         
     }
     private void FixedUpdate()
@@ -101,6 +103,7 @@ public class Enemy : MonoBehaviour
             StartCoroutine(Dead());
             GameManager.instance.kill++;
             GameManager.instance.GetExp();
+            AudioManager.instance.sfx(1);
         }
     }
      IEnumerator KnockBack()
