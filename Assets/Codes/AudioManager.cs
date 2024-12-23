@@ -55,6 +55,10 @@ public class AudioManager : MonoBehaviour
         sfxPlayer.clip = sfxClip[a];
         sfxPlayer.Play();
     }
+    public void ChanceVolume(float volume)
+    {
+        bgmPlayer.volume = volume;
+    }
     public void PauseMusic()
     {
         bgmPlayer.Pause();

@@ -58,12 +58,14 @@ public class GameManager : MonoBehaviour
             level++;
             exp = 0;
             uilevelUp.Show();
+            AudioManager.instance.sfx(2);
         }
     }
     public void Stop()
     {
         isLive = false;
         Time.timeScale = 0;
+        
     }
 
     public void Resume()

@@ -14,15 +14,16 @@ public class LevelUp : MonoBehaviour
     {
         Next();
         rect.localScale = Vector3.one;//gan scale cua LevelUp bang (1,1,1)
-        AudioManager.instance.sfx(2);
-        AudioManager.instance.PauseMusic();
         GameManager.instance.Stop();
+        AudioManager.instance.ChanceVolume(0.01f);
+        AudioManager.instance.sfx(2);
     }
     public void Hide()
     {
         rect.localScale = Vector3.zero;//gan scale cua LevelUp bang (0,0,0)
         GameManager.instance.Resume();
-        AudioManager.instance.ResumeMusic();
+        AudioManager.instance.ChanceVolume(GameManager.instance.bgmBattleVolume);
+        AudioManager.instance.sfx(2);
         AudioManager.instance.sfx(3);
     }
     public void Select(int i)

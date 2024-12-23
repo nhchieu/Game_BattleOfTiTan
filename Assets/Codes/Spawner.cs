@@ -36,9 +36,9 @@ public class Spawner : MonoBehaviour
             enemy.GetComponent<Enemy>().Init(spawnData[level]);
 
             // test 
-            GameObject farEnemy = GameManager.instance.pool.Get(0);
-            farEnemy.transform.position = spawPoint[Random.Range(1, spawPoint.Length)].position;
-            farEnemy.GetComponent<Enemy>().Init(spawnData[5]);
+            //GameObject farEnemy = GameManager.instance.pool.Get(0);
+            //farEnemy.transform.position = spawPoint[Random.Range(1, spawPoint.Length)].position;
+            //farEnemy.GetComponent<Enemy>().Init(spawnData[5]);
         }
         else
         {
