@@ -16,7 +16,7 @@ MonoBehaviour:
   itemId: 1
   itemName: "\u0110\u1EA1n H\u1EE7y Di\u1EC7t"
   itemDesc: "+{0}% S\xE1t Th\u01B0\u01A1ng"
-  itemIcon: {fileID: 21300000, guid: cf9760a2dafc94f97b705a62ec67e9ff, type: 3}
+  itemIcon: {fileID: -205726582, guid: d71a3dc7aa20fad4f9a99fc76a9254ba, type: 3}
   baseDamage: 5
   baseCount: 1
   damages:
