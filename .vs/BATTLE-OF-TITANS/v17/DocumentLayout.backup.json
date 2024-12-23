@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "F:\\Game\\BATTLE-OF-TITANS\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{73278757-A23C-E255-C5CB-5FECB7B784D2}|Assembly-CSharp.csproj|f:\\game\\battle-of-titans\\assets\\codes\\spawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73278757-A23C-E255-C5CB-5FECB7B784D2}|Assembly-CSharp.csproj|solutionrelative:assets\\codes\\spawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73278757-A23C-E255-C5CB-5FECB7B784D2}|Assembly-CSharp.csproj|f:\\game\\battle-of-titans\\assets\\codes\\poolmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73278757-A23C-E255-C5CB-5FECB7B784D2}|Assembly-CSharp.csproj|solutionrelative:assets\\codes\\poolmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{73278757-A23C-E255-C5CB-5FECB7B784D2}|Assembly-CSharp.csproj|f:\\game\\battle-of-titans\\assets\\codes\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{73278757-A23C-E255-C5CB-5FECB7B784D2}|Assembly-CSharp.csproj|solutionrelative:assets\\codes\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -14,11 +22,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PoolManager.cs",
+              "DocumentMoniker": "F:\\Game\\BATTLE-OF-TITANS\\Assets\\Codes\\PoolManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Codes\\PoolManager.cs",
+              "ToolTip": "F:\\Game\\BATTLE-OF-TITANS\\Assets\\Codes\\PoolManager.cs",
+              "RelativeToolTip": "Assets\\Codes\\PoolManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-23T07:18:27.827Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Spawner.cs",
+              "DocumentMoniker": "F:\\Game\\BATTLE-OF-TITANS\\Assets\\Codes\\Spawner.cs",
+              "RelativeDocumentMoniker": "Assets\\Codes\\Spawner.cs",
+              "ToolTip": "F:\\Game\\BATTLE-OF-TITANS\\Assets\\Codes\\Spawner.cs*",
+              "RelativeToolTip": "Assets\\Codes\\Spawner.cs*",
+              "ViewState": "AgIAABgAAAAAAAAAAAAYwCYAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-23T07:17:22.574Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Bullet.cs",
               "DocumentMoniker": "F:\\Game\\BATTLE-OF-TITANS\\Assets\\Codes\\Bullet.cs",
               "RelativeDocumentMoniker": "Assets\\Codes\\Bullet.cs",
