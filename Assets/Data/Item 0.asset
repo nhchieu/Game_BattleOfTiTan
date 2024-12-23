@@ -16,7 +16,7 @@ MonoBehaviour:
   itemId: 0
   itemName: "Ki\u1EBFm Kim C\u01B0\u01A1ng"
   itemDesc: "+{0}% S\xE1t Th\u01B0\u01A1ng\nS\u1ED1 l\u01B0\u1EE3ng + {1}"
-  itemIcon: {fileID: -6724160040262867536, guid: e9f4ee501cbe1a84aa13877ae6e9eea7, type: 3}
+  itemIcon: {fileID: 3510844670948392461, guid: b69dfe16a9cbfb140813a22688fe9a8d, type: 3}
   baseDamage: 4.5
   baseCount: 2
   damages:
