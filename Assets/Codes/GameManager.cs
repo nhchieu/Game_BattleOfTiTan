@@ -16,7 +16,6 @@ public class GameManager : MonoBehaviour
     public Player player;
     public LevelUp uilevelUp;
     public Result uiResult;
-    public Enemy enemy;
     [Header("# Player Info")]
     public int level;
     public int kill;
@@ -116,6 +115,6 @@ public class GameManager : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
-        UnityEditor.EditorApplication.isPlaying = false;
+       
     }
 }
