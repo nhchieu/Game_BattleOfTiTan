@@ -4,6 +4,7 @@ public class LevelUp : MonoBehaviour
 {
     RectTransform rect;
     Item[] items;
+
     private void Awake()
     {
         rect = GetComponent<RectTransform>();
@@ -13,23 +14,26 @@ public class LevelUp : MonoBehaviour
     public void Show()
     {
         Next();
-        rect.localScale = Vector3.one;//gan scale cua LevelUp bang (1,1,1)
+        rect.localScale = Vector3.one;
         GameManager.instance.Stop();
         AudioManager.instance.ChanceVolume(0.01f);
         AudioManager.instance.sfx(2);
     }
+
     public void Hide()
     {
-        rect.localScale = Vector3.zero;//gan scale cua LevelUp bang (0,0,0)
+        rect.localScale = Vector3.zero;
         GameManager.instance.Resume();
         AudioManager.instance.ChanceVolume(GameManager.instance.bgmBattleVolume);
         AudioManager.instance.sfx(2);
         AudioManager.instance.sfx(3);
     }
+
     public void Select(int i)
     {
         items[i].OnClick();
     }
+
     void Next()
     {
         foreach (Item item in items)
@@ -37,33 +41,35 @@ public class LevelUp : MonoBehaviour
             item.gameObject.SetActive(false);
         }
 
-        int[] ran = new int[3];
-        while (true)
-        {
-            ran[0] = Random.Range(0, items.Length);
-            ran[1] = Random.Range(0, items.Length);//tra ve 1 so trong khoang tu 0 den so phan tu co trong LevelUp
-            ran[2] = Random.Range(0, items.Length);
+        var indices = new System.Collections.Generic.List<int> { 0, 1, 2, 3, 4 }; 
+        Shuffle(indices);
 
-            if (ran[0] != ran[1] && ran[1] != ran[2] && ran[0] != ran[2])
-                break;
-        }
-
-        for (int i = 0; i < ran.Length; i++)
+        for (int i = 0; i < 3; i++)
         {
-            Item ranItem = items[ran[i]];//khai bao ranitem bang 1 phan tu ngau nhien trong LevelUp
+            var ranItem = items[indices[i]];
+
             if (ranItem.level == ranItem.Data.damages.Length)
             {
-                items[4].gameObject.SetActive(true);
-
+                items[4].gameObject.SetActive(true); 
             }
             else
             {
-                ranItem.gameObject.SetActive(true);
+                ranItem.gameObject.SetActive(true); 
             }
-
         }
+    }
 
-
-
+    private void Shuffle(System.Collections.Generic.List<int> list)
+    {
+        System.Random rng = new System.Random();
+        int n = list.Count;
+        while (n > 1)
+        {
+            n--;
+            int k = rng.Next(n + 1);
+            int value = list[k];
+            list[k] = list[n];
+            list[n] = value;
+        }
     }
 }
