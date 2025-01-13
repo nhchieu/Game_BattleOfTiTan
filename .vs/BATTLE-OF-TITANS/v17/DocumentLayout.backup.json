@@ -3,31 +3,31 @@
   "WorkspaceRootPath": "E:\\BATTLE-OF-TITANS\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{73278757-A23C-E255-C5CB-5FECB7B784D2}|Assembly-CSharp.csproj|E:\\BATTLE-OF-TITANS\\assets\\codes\\spawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73278757-A23C-E255-C5CB-5FECB7B784D2}|Assembly-CSharp.csproj|solutionrelative:assets\\codes\\spawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{73278757-A23C-E255-C5CB-5FECB7B784D2}|Assembly-CSharp.csproj|e:\\battle-of-titans\\assets\\codes\\hud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{73278757-A23C-E255-C5CB-5FECB7B784D2}|Assembly-CSharp.csproj|solutionrelative:assets\\codes\\hud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{73278757-A23C-E255-C5CB-5FECB7B784D2}|Assembly-CSharp.csproj|e:\\battle-of-titans\\assets\\codes\\spawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{73278757-A23C-E255-C5CB-5FECB7B784D2}|Assembly-CSharp.csproj|solutionrelative:assets\\codes\\spawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{73278757-A23C-E255-C5CB-5FECB7B784D2}|Assembly-CSharp.csproj|e:\\battle-of-titans\\assets\\codes\\levelup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{73278757-A23C-E255-C5CB-5FECB7B784D2}|Assembly-CSharp.csproj|solutionrelative:assets\\codes\\levelup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{73278757-A23C-E255-C5CB-5FECB7B784D2}|Assembly-CSharp.csproj|e:\\battle-of-titans\\assets\\codes\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{73278757-A23C-E255-C5CB-5FECB7B784D2}|Assembly-CSharp.csproj|E:\\BATTLE-OF-TITANS\\assets\\codes\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{73278757-A23C-E255-C5CB-5FECB7B784D2}|Assembly-CSharp.csproj|solutionrelative:assets\\codes\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{73278757-A23C-E255-C5CB-5FECB7B784D2}|Assembly-CSharp.csproj|e:\\battle-of-titans\\assets\\codes\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{73278757-A23C-E255-C5CB-5FECB7B784D2}|Assembly-CSharp.csproj|E:\\BATTLE-OF-TITANS\\assets\\codes\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{73278757-A23C-E255-C5CB-5FECB7B784D2}|Assembly-CSharp.csproj|solutionrelative:assets\\codes\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{73278757-A23C-E255-C5CB-5FECB7B784D2}|Assembly-CSharp.csproj|e:\\battle-of-titans\\assets\\codes\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{73278757-A23C-E255-C5CB-5FECB7B784D2}|Assembly-CSharp.csproj|E:\\BATTLE-OF-TITANS\\assets\\codes\\levelup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73278757-A23C-E255-C5CB-5FECB7B784D2}|Assembly-CSharp.csproj|solutionrelative:assets\\codes\\levelup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73278757-A23C-E255-C5CB-5FECB7B784D2}|Assembly-CSharp.csproj|E:\\BATTLE-OF-TITANS\\assets\\codes\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{73278757-A23C-E255-C5CB-5FECB7B784D2}|Assembly-CSharp.csproj|solutionrelative:assets\\codes\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{73278757-A23C-E255-C5CB-5FECB7B784D2}|Assembly-CSharp.csproj|e:\\battle-of-titans\\assets\\codes\\reponsition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{73278757-A23C-E255-C5CB-5FECB7B784D2}|Assembly-CSharp.csproj|E:\\BATTLE-OF-TITANS\\assets\\codes\\reponsition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{73278757-A23C-E255-C5CB-5FECB7B784D2}|Assembly-CSharp.csproj|solutionrelative:assets\\codes\\reponsition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -46,63 +46,63 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "Enemy.cs",
               "DocumentMoniker": "E:\\BATTLE-OF-TITANS\\Assets\\Codes\\Enemy.cs",
               "RelativeDocumentMoniker": "Assets\\Codes\\Enemy.cs",
               "ToolTip": "E:\\BATTLE-OF-TITANS\\Assets\\Codes\\Enemy.cs",
               "RelativeToolTip": "Assets\\Codes\\Enemy.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAwA0AAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAkwFUAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-12T19:04:14.226Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "HUD.cs",
               "DocumentMoniker": "E:\\BATTLE-OF-TITANS\\Assets\\Codes\\HUD.cs",
               "RelativeDocumentMoniker": "Assets\\Codes\\HUD.cs",
               "ToolTip": "E:\\BATTLE-OF-TITANS\\Assets\\Codes\\HUD.cs",
               "RelativeToolTip": "Assets\\Codes\\HUD.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAYwDMAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAC0AAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-12T18:42:49.202Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Spawner.cs",
               "DocumentMoniker": "E:\\BATTLE-OF-TITANS\\Assets\\Codes\\Spawner.cs",
               "RelativeDocumentMoniker": "Assets\\Codes\\Spawner.cs",
               "ToolTip": "E:\\BATTLE-OF-TITANS\\Assets\\Codes\\Spawner.cs",
               "RelativeToolTip": "Assets\\Codes\\Spawner.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAYwB0AAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACMAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-12T18:10:12.191Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "GameManager.cs",
               "DocumentMoniker": "E:\\BATTLE-OF-TITANS\\Assets\\Codes\\GameManager.cs",
               "RelativeDocumentMoniker": "Assets\\Codes\\GameManager.cs",
               "ToolTip": "E:\\BATTLE-OF-TITANS\\Assets\\Codes\\GameManager.cs",
               "RelativeToolTip": "Assets\\Codes\\GameManager.cs",
-              "ViewState": "AgIAAF4AAAAAAAAAAADwv3oAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAABoAAAAAAAAAAAAAwDQAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-12T18:06:17.546Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "LevelUp.cs",
               "DocumentMoniker": "E:\\BATTLE-OF-TITANS\\Assets\\Codes\\LevelUp.cs",
               "RelativeDocumentMoniker": "Assets\\Codes\\LevelUp.cs",
@@ -110,8 +110,7 @@
               "RelativeToolTip": "Assets\\Codes\\LevelUp.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAAwCsAAABQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-12T17:05:52.553Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-12T17:05:52.553Z"
             },
             {
               "$type": "Document",
@@ -123,8 +122,7 @@
               "RelativeToolTip": "Assets\\Codes\\Player.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-12T17:05:21.421Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-12T17:05:21.421Z"
             },
             {
               "$type": "Document",
@@ -136,8 +134,7 @@
               "RelativeToolTip": "Assets\\Codes\\Reponsition.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-01T11:03:54.281Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-01T11:03:54.281Z"
             },
             {
               "$type": "Document",

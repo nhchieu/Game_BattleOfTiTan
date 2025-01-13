@@ -50,10 +50,6 @@ public class Item : MonoBehaviour
         }
     }
 
-    private void LateUpdate()
-    {
-        textLevel.text = "Lv." + (level);
-    }
 
     public void OnClick()
     {
@@ -96,7 +92,6 @@ public class Item : MonoBehaviour
                 break;
             case ItemData.ItemType.Heal:
                 GameManager.instance.player.Health =GameManager.instance.player.maxHealth;
-                
                 break;
 
         }

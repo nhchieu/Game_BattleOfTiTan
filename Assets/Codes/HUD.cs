@@ -25,10 +25,10 @@ public class HUD : MonoBehaviour
                 mySlider.value = curExp/maxExp;
                 break;
             case InfoType.Level:
-                myText.text = "Level-"+GameManager.instance.level;
+                myText.text = "Level-"+ GameManager.instance.level;
                 break;
             case InfoType.Kill:
-                myText.text=""+GameManager.instance.kill;
+                myText.text = ""+ GameManager.instance.kill;
                 break;
             case InfoType.Time:
                 float time = GameManager.instance.gameTime;
