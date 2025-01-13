@@ -41,7 +41,7 @@ public class LevelUp : MonoBehaviour
             item.gameObject.SetActive(false);
         }
 
-        var indices = new System.Collections.Generic.List<int> { 0, 1, 2, 3, 4 }; 
+        var indices = new System.Collections.Generic.List<int> { 0, 1, 2, 3, 4, 5 }; 
         Shuffle(indices);
 
         for (int i = 0; i < 3; i++)

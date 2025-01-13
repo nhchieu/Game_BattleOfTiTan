@@ -11,7 +11,7 @@ public class Enemy : MonoBehaviour
     [Header("# Enemy control")]
     public RuntimeAnimatorController[] animCon;
     public Rigidbody2D target;
-    [SerializeField] bool islive;
+    [SerializeField] public bool islive;
 
     Rigidbody2D rigid;
     SpriteRenderer spriter;
@@ -80,14 +80,11 @@ public class Enemy : MonoBehaviour
         {
             return;
         }
-        // đẩy lùi quái
-
-        //Vector3 Vec = dirVec.normalized; 
-        //transform.Translate(Vec);
         StartCoroutine(KnockBack());
 
         health -= collision.GetComponent<Bullet>().damage;
-
+        //HUD
+        GameManager.instance.Spawner.Hp-= collision.GetComponent<Bullet>().damage;
 
         if (health > 0)
         {

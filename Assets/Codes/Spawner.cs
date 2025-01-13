@@ -1,11 +1,15 @@
+using System.Collections;
 using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
     public Transform[] spawPoint;
     public SpawnData[] spawnData;
+    public GameObject HealthBar;
     [SerializeField]float time=0;
     public int level;
+    public float Hp;
+    
 
     private void Awake()
     {
@@ -15,17 +19,13 @@ public class Spawner : MonoBehaviour
     {
         if (!GameManager.instance.isLive)
             return;
-
         time += Time.deltaTime;
         level =Mathf.FloorToInt(GameManager.instance.gameTime / 30f);
-
         if (time > spawnData[level].spawnTime )
         {
             time = 0;
             spawn();
         }
-
-       
     }
     void spawn()
     {
@@ -34,20 +34,19 @@ public class Spawner : MonoBehaviour
             GameObject enemy = GameManager.instance.pool.Get(0);
             enemy.transform.position = spawPoint[Random.Range(1, spawPoint.Length)].position;
             enemy.GetComponent<Enemy>().Init(spawnData[level]);
-
-            // test 
-            //GameObject farEnemy = GameManager.instance.pool.Get(0);
-            //farEnemy.transform.position = spawPoint[Random.Range(1, spawPoint.Length)].position;
-            //farEnemy.GetComponent<Enemy>().Init(spawnData[5]);
         }
         else
         {
+            
             GameObject enemy1 = GameManager.instance.pool.Get(0);
             enemy1.transform.position = spawPoint[Random.Range(1, spawPoint.Length)].position;
             Vector3 newScale = enemy1.transform.localScale * 4f; // tang scale
             enemy1.transform.localScale = newScale;
             enemy1.GetComponent<Enemy>().Init(spawnData[level]);
             spawnData[level].spawnTime = 10000;
+            //HUD
+            Hp = enemy1.GetComponent<Enemy>().health;
+            HealthBar.SetActive(true);
         }
 
     }

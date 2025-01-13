@@ -14,8 +14,11 @@ public class GameManager : MonoBehaviour
     [Header("# GameObject")]
     public PoolManager pool;
     public Player player;
+    public Enemy enemy;
     public LevelUp uilevelUp;
     public Result uiResult;
+    public GameObject ClearEnemy;
+    public Spawner Spawner;
     [Header("# Player Info")]
     public int level;
     public int kill;
@@ -46,6 +49,13 @@ public class GameManager : MonoBehaviour
         if (gameTime == maxGameTime && player.scanner.nearestTarget == null)
         {
             GameWin();
+        }
+        //them 2 dieu kien de test game
+        if (Input.GetMouseButtonDown(1)) {
+            Time.timeScale = 2;
+        }
+        if (Input.GetMouseButtonDown(2)) {
+            Time.timeScale = 1;
         }
     }
     public void GetExp()

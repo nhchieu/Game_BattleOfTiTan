@@ -4,7 +4,7 @@ using static Cinemachine.DocumentationSortingAttribute;
 
 public class HUD : MonoBehaviour
 {
-    public enum InfoType { Exp,Level,Kill,Time,Health }
+    public enum InfoType { Exp,Level,Kill,Time,Health, HealthBoss }
     public InfoType type;
 
     Text myText;
@@ -40,6 +40,11 @@ public class HUD : MonoBehaviour
                 float health=GameManager.instance.player.Health;
                 float maxHealth=GameManager.instance.player.maxHealth;
                 mySlider.value = health/maxHealth;
+                break;
+            case InfoType.HealthBoss:
+                float maxhealthboss = GameManager.instance.Spawner.spawnData[3].health;
+                float healthboss = GameManager.instance.Spawner.Hp;
+                mySlider.value=healthboss/maxhealthboss;
                 break;
         }
     }
