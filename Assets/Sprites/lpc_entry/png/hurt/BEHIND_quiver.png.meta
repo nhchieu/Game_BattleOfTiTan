@@ -259,7 +259,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BEHIND_quiver_0: 4544719037655290984
+      BEHIND_quiver_1: 9018369824940722956
+      BEHIND_quiver_2: -7335389501462589534
+      BEHIND_quiver_3: -7365669027119877873
+      BEHIND_quiver_4: -5691407153002890306
+      BEHIND_quiver_5: -7605747882624797073
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

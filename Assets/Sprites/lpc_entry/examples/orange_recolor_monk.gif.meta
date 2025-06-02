@@ -209,7 +209,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      orange_recolor_monk_0: 5552638970487353683
+      orange_recolor_monk_1: -5866882568519120303
+      orange_recolor_monk_2: -5185340360933475974
+      orange_recolor_monk_3: 5605580444535098992
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

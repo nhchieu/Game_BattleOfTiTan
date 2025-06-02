@@ -234,7 +234,12 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      LEGS_plate_armor_pants_0: -6884528854389102824
+      LEGS_plate_armor_pants_1: -3321161214774454514
+      LEGS_plate_armor_pants_2: 2218559522127718592
+      LEGS_plate_armor_pants_3: -4976230345710756775
+      LEGS_plate_armor_pants_4: -3588027370628103949
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

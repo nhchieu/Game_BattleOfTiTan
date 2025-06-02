@@ -209,7 +209,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      dark_skinned_knight_0: 7547637410725734254
+      dark_skinned_knight_1: -5261321372363626983
+      dark_skinned_knight_2: -725053309301292331
+      dark_skinned_knight_3: 7694040232193638821
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

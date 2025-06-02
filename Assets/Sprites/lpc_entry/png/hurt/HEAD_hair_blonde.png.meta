@@ -259,7 +259,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      HEAD_hair_blonde_0: -7415893660062548086
+      HEAD_hair_blonde_1: -3014633940738268977
+      HEAD_hair_blonde_2: 402504390291882348
+      HEAD_hair_blonde_3: 647450099704228048
+      HEAD_hair_blonde_4: -7327726315870943282
+      HEAD_hair_blonde_5: -5547286814672647404
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

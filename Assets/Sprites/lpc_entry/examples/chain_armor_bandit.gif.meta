@@ -209,7 +209,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      chain_armor_bandit_0: -5354538276069760357
+      chain_armor_bandit_1: 4588496490606382535
+      chain_armor_bandit_2: 1320380341332906194
+      chain_armor_bandit_3: -2056740278689137583
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -234,7 +234,12 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      LEGS_robe_skirt_0: 1012726539758615754
+      LEGS_robe_skirt_1: -205429104672965858
+      LEGS_robe_skirt_2: -2637973019622144730
+      LEGS_robe_skirt_3: -48551012443759882
+      LEGS_robe_skirt_4: 2373070085929707008
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

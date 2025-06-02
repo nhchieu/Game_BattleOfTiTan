@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      HEAD_skeleton_eye_glow_0: 5655064435955815967
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

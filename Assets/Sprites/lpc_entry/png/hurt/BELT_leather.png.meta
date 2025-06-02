@@ -184,7 +184,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BELT_leather_0: 4038344425654984701
+      BELT_leather_1: -2496825779555119690
+      BELT_leather_2: -2610123358832778952
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

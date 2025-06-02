@@ -209,7 +209,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      mixed_metal_0: 6161024876582394966
+      mixed_metal_1: -3124296842415454934
+      mixed_metal_2: 7806003198721899411
+      mixed_metal_3: 3928616290766319064
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

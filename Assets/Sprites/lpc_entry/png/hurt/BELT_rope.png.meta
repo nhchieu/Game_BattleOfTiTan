@@ -234,7 +234,12 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BELT_rope_0: -6104646590342317627
+      BELT_rope_1: 4893521143339036357
+      BELT_rope_2: 3562948288019893220
+      BELT_rope_3: 3940990570392457943
+      BELT_rope_4: 5889822738347397676
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

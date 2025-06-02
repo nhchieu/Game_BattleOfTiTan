@@ -309,7 +309,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      FEET_shoes_brown_0: 2285273353237781881
+      FEET_shoes_brown_1: -7097599025832242691
+      FEET_shoes_brown_2: 2965648135189324355
+      FEET_shoes_brown_3: 7386359495701502891
+      FEET_shoes_brown_4: 7759117401311447665
+      FEET_shoes_brown_5: 6529218748905806994
+      FEET_shoes_brown_6: 555881331064012340
+      FEET_shoes_brown_7: 5138048946391865455
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

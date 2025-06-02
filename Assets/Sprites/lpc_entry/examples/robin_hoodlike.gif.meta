@@ -209,7 +209,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      robin_hoodlike_0: -6919117435860906332
+      robin_hoodlike_1: 5911693773045470220
+      robin_hoodlike_2: -2918992535128362953
+      robin_hoodlike_3: -6692104359163736550
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

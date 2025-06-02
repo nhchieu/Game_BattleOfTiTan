@@ -309,7 +309,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BODY_animation_0: 2866502029772508092
+      BODY_animation_1: -7824051593122464281
+      BODY_animation_2: -5073199366754858008
+      BODY_animation_3: -1112590870174155271
+      BODY_animation_4: 403136579148153360
+      BODY_animation_5: 1326009177871141990
+      BODY_animation_6: -8500141067592867819
+      BODY_animation_7: 5857464270815839819
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

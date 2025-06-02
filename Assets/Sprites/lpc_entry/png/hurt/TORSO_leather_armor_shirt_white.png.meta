@@ -259,7 +259,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      TORSO_leather_armor_shirt_white_0: -4082484916860373939
+      TORSO_leather_armor_shirt_white_1: -4960312951486160978
+      TORSO_leather_armor_shirt_white_2: -3909362101229726822
+      TORSO_leather_armor_shirt_white_3: -8527442687098588620
+      TORSO_leather_armor_shirt_white_4: 8149614193824592280
+      TORSO_leather_armor_shirt_white_5: -7233160983372877864
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

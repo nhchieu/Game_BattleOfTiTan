@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      thrust_longer_spear_0: 3686340360161223219
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

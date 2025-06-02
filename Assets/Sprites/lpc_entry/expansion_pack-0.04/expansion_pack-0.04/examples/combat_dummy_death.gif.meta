@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      combat_dummy_death_0: 2872063995119162200
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

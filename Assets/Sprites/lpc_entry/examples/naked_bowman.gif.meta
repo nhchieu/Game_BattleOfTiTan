@@ -209,7 +209,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      naked_bowman_0: 3034954868981616737
+      naked_bowman_1: 2071017986374526002
+      naked_bowman_2: -7004268746470151811
+      naked_bowman_3: 5813096309673249490
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

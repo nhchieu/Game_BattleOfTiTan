@@ -234,7 +234,12 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      LEGS_pants_greenish_0: -6944199913750945487
+      LEGS_pants_greenish_1: 4256405993151851814
+      LEGS_pants_greenish_2: -3544489893109916541
+      LEGS_pants_greenish_3: 1575128191180386832
+      LEGS_pants_greenish_4: -2706359087357616526
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -209,7 +209,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      armored_skeleton_slash_0: -7265344165222951680
+      armored_skeleton_slash_1: 5608380260027760936
+      armored_skeleton_slash_2: 3930993651605609962
+      armored_skeleton_slash_3: 7340314517648394345
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
