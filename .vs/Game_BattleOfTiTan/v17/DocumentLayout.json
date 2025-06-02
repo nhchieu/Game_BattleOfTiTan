@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Nguyen Chieu\\Desktop\\bttt\\Game_BattleOfTiTan\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9E74A2DA-74AD-07BD-73D6-19B637F8D87E}|Assembly-CSharp.csproj|c:\\users\\nguyen chieu\\desktop\\bttt\\game_battleoftitan\\assets\\codes\\scenecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E74A2DA-74AD-07BD-73D6-19B637F8D87E}|Assembly-CSharp.csproj|solutionrelative:assets\\codes\\scenecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SceneController.cs",
+              "DocumentMoniker": "C:\\Users\\Nguyen Chieu\\Desktop\\bttt\\Game_BattleOfTiTan\\Assets\\Codes\\SceneController.cs",
+              "RelativeDocumentMoniker": "Assets\\Codes\\SceneController.cs",
+              "ToolTip": "C:\\Users\\Nguyen Chieu\\Desktop\\bttt\\Game_BattleOfTiTan\\Assets\\Codes\\SceneController.cs",
+              "RelativeToolTip": "Assets\\Codes\\SceneController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwCMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T15:45:07.615Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
