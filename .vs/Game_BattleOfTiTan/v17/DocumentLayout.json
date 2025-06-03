@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\Nguyen Chieu\\Desktop\\bttt\\Game_BattleOfTiTan\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{9E74A2DA-74AD-07BD-73D6-19B637F8D87E}|Assembly-CSharp.csproj|c:\\users\\nguyen chieu\\desktop\\bttt\\game_battleoftitan\\assets\\codes\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E74A2DA-74AD-07BD-73D6-19B637F8D87E}|Assembly-CSharp.csproj|solutionrelative:assets\\codes\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E74A2DA-74AD-07BD-73D6-19B637F8D87E}|Assembly-CSharp.csproj|c:\\users\\nguyen chieu\\desktop\\bttt\\game_battleoftitan\\assets\\codes\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E74A2DA-74AD-07BD-73D6-19B637F8D87E}|Assembly-CSharp.csproj|solutionrelative:assets\\codes\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E74A2DA-74AD-07BD-73D6-19B637F8D87E}|Assembly-CSharp.csproj|c:\\users\\nguyen chieu\\desktop\\bttt\\game_battleoftitan\\assets\\codes\\gatepoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E74A2DA-74AD-07BD-73D6-19B637F8D87E}|Assembly-CSharp.csproj|solutionrelative:assets\\codes\\gatepoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9E74A2DA-74AD-07BD-73D6-19B637F8D87E}|Assembly-CSharp.csproj|c:\\users\\nguyen chieu\\desktop\\bttt\\game_battleoftitan\\assets\\codes\\scenecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9E74A2DA-74AD-07BD-73D6-19B637F8D87E}|Assembly-CSharp.csproj|solutionrelative:assets\\codes\\scenecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -14,17 +26,56 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GatePoint.cs",
+              "DocumentMoniker": "C:\\Users\\Nguyen Chieu\\Desktop\\bttt\\Game_BattleOfTiTan\\Assets\\Codes\\GatePoint.cs",
+              "RelativeDocumentMoniker": "Assets\\Codes\\GatePoint.cs",
+              "ToolTip": "C:\\Users\\Nguyen Chieu\\Desktop\\bttt\\Game_BattleOfTiTan\\Assets\\Codes\\GatePoint.cs",
+              "RelativeToolTip": "Assets\\Codes\\GatePoint.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T16:13:01.261Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GameManager.cs",
+              "DocumentMoniker": "C:\\Users\\Nguyen Chieu\\Desktop\\bttt\\Game_BattleOfTiTan\\Assets\\Codes\\GameManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Codes\\GameManager.cs",
+              "ToolTip": "C:\\Users\\Nguyen Chieu\\Desktop\\bttt\\Game_BattleOfTiTan\\Assets\\Codes\\GameManager.cs",
+              "RelativeToolTip": "Assets\\Codes\\GameManager.cs",
+              "ViewState": "AgIAAG0AAAAAAAAAAAAcwH4AAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T15:58:46.54Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Player.cs",
+              "DocumentMoniker": "C:\\Users\\Nguyen Chieu\\Desktop\\bttt\\Game_BattleOfTiTan\\Assets\\Codes\\Player.cs",
+              "RelativeDocumentMoniker": "Assets\\Codes\\Player.cs",
+              "ToolTip": "C:\\Users\\Nguyen Chieu\\Desktop\\bttt\\Game_BattleOfTiTan\\Assets\\Codes\\Player.cs",
+              "RelativeToolTip": "Assets\\Codes\\Player.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAgwBUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T15:58:16.802Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "SceneController.cs",
               "DocumentMoniker": "C:\\Users\\Nguyen Chieu\\Desktop\\bttt\\Game_BattleOfTiTan\\Assets\\Codes\\SceneController.cs",
               "RelativeDocumentMoniker": "Assets\\Codes\\SceneController.cs",
               "ToolTip": "C:\\Users\\Nguyen Chieu\\Desktop\\bttt\\Game_BattleOfTiTan\\Assets\\Codes\\SceneController.cs",
               "RelativeToolTip": "Assets\\Codes\\SceneController.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAQwCMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-02T15:45:07.615Z",
               "EditorCaption": ""

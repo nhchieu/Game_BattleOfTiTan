@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     public Result uiResult;
     public GameObject ClearEnemy;
     public Spawner Spawner;
+    [SerializeField] Animator transitionAnim;
     [Header("# Player Info")]
     public int level;
     public int kill;
@@ -90,6 +91,10 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
         AudioManager.instance.BgmOn(1, bgmBattleVolume);
     }
+    public void NextScreen()
+    {
+        StartCoroutine(LoadScene());
+    }
     public void GameRetry()
     {
         SceneManager.LoadScene(0);
@@ -112,6 +117,14 @@ public class GameManager : MonoBehaviour
         AudioManager.instance.sfx(4);
         AudioManager.instance.PauseMusic();
         Stop();
+    }
+    IEnumerator LoadScene()
+    {
+        transitionAnim.SetTrigger("end");
+        yield return new WaitForSeconds(4f);
+        Vector3 v3 = new Vector3(10003, 9982, 0);
+        player.transform.position = v3;
+        transitionAnim.SetTrigger("start");
     }
     IEnumerator GameWinRoutine()
     {

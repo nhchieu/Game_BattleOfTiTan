@@ -6,6 +6,7 @@ public class SceneController : MonoBehaviour
 {
     public static SceneController instance;
     [SerializeField] Animator transitionAnim;
+    
 
     private void Awake()
     {
@@ -18,18 +19,5 @@ public class SceneController : MonoBehaviour
         {
             Destroy(gameObject);
         }
-    }
-
-    public void NextScene()
-    {
-        StartCoroutine(LoadScene());
-    }
-
-    IEnumerator LoadScene()
-    {
-        transitionAnim.SetTrigger("end");
-        yield return new WaitForSeconds(2f);
-        SceneManager.LoadScene(1);
-        transitionAnim.SetTrigger("start");
     }
 }
