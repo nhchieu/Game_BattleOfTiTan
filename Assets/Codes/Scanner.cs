@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Scanner : MonoBehaviour
@@ -6,9 +7,12 @@ public class Scanner : MonoBehaviour
     public LayerMask targetLayer;
     public RaycastHit2D[] targets;
     public Transform nearestTarget;
+    
 
     private void FixedUpdate()
     {
+        //targetPrefab.transform.position = mousePos;
+        //Console.WriteLine("Mouse Position: " + mousePos);
         targets = Physics2D.CircleCastAll(transform.position, scanRange, Vector2.zero, 0,targetLayer);
         nearestTarget = GetNearest();
         

@@ -131,7 +131,8 @@ public class Weapon : MonoBehaviour
             return;
         }
         Vector3 targetPos = player.scanner.nearestTarget.position;
-        Vector3 dir = targetPos - transform.position;
+        Vector3 targetPos1 = GameManager.instance.targetPrefab.transform.position;
+        Vector3 dir = targetPos1 - transform.position;
         dir = dir.normalized;
 
         Transform bullet = GameManager.instance.pool.Get(prefabId).transform;

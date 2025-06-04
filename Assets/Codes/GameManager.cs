@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     public LevelUp uilevelUp;
     public Result uiResult;
     public GameObject ClearEnemy;
+    public GameObject targetPrefab;
     public Spawner Spawner;
     [SerializeField] Animator transitionAnim;
     [Header("# Player Info")]
@@ -34,9 +35,14 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         uilevelUp.Select(1);
+        Cursor.visible = false;
     }
     private void Update()
     {
+        Vector3 mousePos = Input.mousePosition;
+        mousePos = Camera.main.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y, Camera.main.nearClipPlane));
+        targetPrefab.transform.position = mousePos;
+        Debug.Log("Mouse Position: " + mousePos);
         if (!isLive)
         {
             return;
@@ -68,6 +74,7 @@ public class GameManager : MonoBehaviour
             level++;
             exp = 0;
             uilevelUp.Show();
+            Cursor.visible = true;
             AudioManager.instance.sfx(2);
         }
     }
