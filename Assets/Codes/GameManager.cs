@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         uilevelUp.Select(1);
-        Cursor.visible = false;
+        
     }
     private void Update()
     {
@@ -74,7 +74,7 @@ public class GameManager : MonoBehaviour
             level++;
             exp = 0;
             uilevelUp.Show();
-            Cursor.visible = true;
+         
             AudioManager.instance.sfx(2);
         }
     }
