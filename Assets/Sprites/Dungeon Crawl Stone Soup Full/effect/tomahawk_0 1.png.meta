@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: bc38d17307cccd848b002939bd220777
+guid: 6ca0638febf2cd44eb43d1ee59f76769
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1847484359399757586
-    second: abyssal_stair_0
+      213: 4800493578679982308
+    second: tomahawk_0_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: abyssal_stair_0
+      name: tomahawk_0_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 0
-        width: 23
-        height: 32
+        x: 6
+        y: 4
+        width: 19
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ee823e573ca6c56e0800000000000000
-      internalID: -1847484359399757586
+      spriteID: 4e893c7c977ce9240800000000000000
+      internalID: 4800493578679982308
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      abyssal_stair_0: -1847484359399757586
+      tomahawk_0_0: 4800493578679982308
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

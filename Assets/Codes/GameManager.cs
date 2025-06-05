@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
         instance = this;
         AudioManager.instance.BgmOn(0, bgmMenuVolume);
     }
-
+    
     private void Start()
     {
         uilevelUp.Select(1);
@@ -39,10 +39,10 @@ public class GameManager : MonoBehaviour
     }
     private void Update()
     {
-        Vector3 mousePos = Input.mousePosition;
-        mousePos = Camera.main.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y, Camera.main.nearClipPlane));
+        Vector2 mousePos = Input.mousePosition;
+        mousePos = Camera.main.ScreenToWorldPoint(new Vector2(mousePos.x, mousePos.y));
         targetPrefab.transform.position = mousePos;
-        Debug.Log("Mouse Position: " + mousePos);
+        
         if (!isLive)
         {
             return;

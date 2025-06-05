@@ -131,8 +131,10 @@ public class Weapon : MonoBehaviour
             return;
         }
         Vector3 targetPos = player.scanner.nearestTarget.position;
-        Vector3 targetPos1 = GameManager.instance.targetPrefab.transform.position;
-        Vector3 dir = targetPos1 - transform.position;
+        Vector2 mousePos = Input.mousePosition;
+        Vector2 targetPos1 = Camera.main.ScreenToWorldPoint(new Vector2(mousePos.x, mousePos.y));
+        Debug.Log("Target Position in weapon: " + targetPos1);
+        Vector2 dir = targetPos1 - (Vector2)transform.position;
         dir = dir.normalized;
 
         Transform bullet = GameManager.instance.pool.Get(prefabId).transform;
@@ -156,7 +158,7 @@ public class Weapon : MonoBehaviour
         Transform bullet = GameManager.instance.pool.Get(prefabId).transform;
         bullet.position = transform.position;
         bullet.Rotate(0, 0, 90f);
-        Vector3 scale = new Vector3(9f, 9f, 9f);
+        Vector3 scale = new Vector3(5f, 5f, 5f);
         bullet.localScale=scale;
         bullet.rotation = Quaternion.FromToRotation(Vector3.up, dir);
         bullet.GetComponent<Bullet>().Init(damage, count, dir);

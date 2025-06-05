@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class Player : MonoBehaviour
 {
@@ -31,11 +32,10 @@ public class Player : MonoBehaviour
     {
         if (!isAlive)
             return;
-
         inputVec.x = Input.GetAxisRaw("Horizontal");
         inputVec.y = Input.GetAxisRaw("Vertical");
-
-        animator.SetFloat("Speed", inputVec.magnitude);
+        animator.SetFloat("run", inputVec.magnitude);
+        Debug.Log("inputVec: " + inputVec);
     }
 
     private void FixedUpdate()
@@ -44,7 +44,21 @@ public class Player : MonoBehaviour
             return;
 
         Vector2 nextVec = inputVec.normalized * speed * Time.fixedDeltaTime;
-        rigid.MovePosition(rigid.position + nextVec); 
+        rigid.MovePosition(rigid.position + nextVec);
+
+        if (Input.GetMouseButtonDown(2)) 
+        {
+            Vector2 mousePos = Input.mousePosition;
+            StartCoroutine(Roll());
+            Vector2 rollDirection = (mousePos - (Vector2)transform.position).normalized * 20 * Time.fixedDeltaTime;
+            rigid.MovePosition(rigid.position + rollDirection);
+            animator.SetBool("isRoll", false);
+        }
+    }
+    IEnumerator Roll()
+    {
+        animator.SetBool("isRoll",true);
+        yield return new WaitForSeconds(0.5f);
     }
 
     private void LateUpdate()
@@ -75,7 +89,7 @@ public class Player : MonoBehaviour
                 transform.GetChild(i).gameObject.SetActive(false);
             }
 
-            animator.SetTrigger("Dead");
+            animator.SetTrigger("dead");
             GameManager.instance.GameOver();
         }
     }
