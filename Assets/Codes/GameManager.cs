@@ -1,3 +1,4 @@
+using Cinemachine;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -12,24 +13,27 @@ public class GameManager : MonoBehaviour
     public float bgmMenuVolume;
     public float bgmBattleVolume;
     [Header("# GameObject")]
-    public PoolManager pool;
-    public Player player;
-    public Enemy enemy;
-    public LevelUp uilevelUp;
-    public Result uiResult;
-    public GameObject ClearEnemy;
-    public GameObject targetPrefab;
-    public Spawner Spawner;
-    [SerializeField] Animator transitionAnim;
+    [SerializeField] public PoolManager pool;
+    [SerializeField] public Player player;
+    [SerializeField] public Enemy enemy;
+    [SerializeField] public LevelUp uilevelUp;
+    [SerializeField] public Result uiResult;
+    [SerializeField] public GameObject ClearEnemy;
+    [SerializeField] public GameObject targetPrefab;
+    [SerializeField] public Spawner Spawner;
+    [SerializeField] public Animator transitionAnim;
+    [SerializeField] public GameObject gate;
     [Header("# Player Info")]
     public int level;
     public int kill;
     public int exp;
     public int[] nextExp = { };
+    private bool isTest = false;
     private void Awake()
     {
         instance = this;
         AudioManager.instance.BgmOn(0, bgmMenuVolume);
+        
     }
     
     private void Start()
@@ -55,6 +59,10 @@ public class GameManager : MonoBehaviour
 
         if (gameTime == maxGameTime && player.scanner.nearestTarget == null)
         {
+            if(isTest)
+            {
+                return;
+            }
             GameWin();
         }
         //them 2 dieu kien de test game
@@ -100,7 +108,9 @@ public class GameManager : MonoBehaviour
     }
     public void NextScreen()
     {
-        StartCoroutine(LoadScene());
+        Vector2 v2 = new Vector3(10003, 9982);
+        player.transform.position = v2;
+        StartCoroutine(LoadScene());  
     }
     public void GameRetry()
     {
@@ -112,7 +122,13 @@ public class GameManager : MonoBehaviour
     }
     public void GameWin()
     {
-        StartCoroutine(GameWinRoutine());
+        isTest=true;
+        Vector2 v2 = (Vector2)player.transform.position;
+        Vector2 gateOffset = new Vector2(0, 7f);
+        Vector2 gatePosition = v2 + gateOffset;
+        gate.transform.position = gatePosition;
+        gate.SetActive(true);
+        //StartCoroutine(GameWinRoutine());
     }
 
     IEnumerator GameOverRoutine()
@@ -121,6 +137,7 @@ public class GameManager : MonoBehaviour
         isLive = false;
         uiResult.gameObject.SetActive(true);
         uiResult.Lose();
+        transitionAnim.SetTrigger("start");
         AudioManager.instance.sfx(4);
         AudioManager.instance.PauseMusic();
         Stop();
@@ -128,9 +145,7 @@ public class GameManager : MonoBehaviour
     IEnumerator LoadScene()
     {
         transitionAnim.SetTrigger("end");
-        yield return new WaitForSeconds(4f);
-        Vector3 v3 = new Vector3(10003, 9982, 0);
-        player.transform.position = v3;
+        yield return new WaitForSeconds(2.5f);
         transitionAnim.SetTrigger("start");
     }
     IEnumerator GameWinRoutine()

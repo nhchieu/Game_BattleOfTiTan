@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     public float speed = 7f;
     public float maxHealth = 100;
     public float Health;
+    public float damegeTaken = 10f;
 
     [Header("# Player Control")]
     private float horizontal_input;
@@ -16,7 +17,13 @@ public class Player : MonoBehaviour
     private SpriteRenderer spriter;
     private Rigidbody2D rigid;
     private Animator animator;
+    private bool canRoll = true;
+    private bool isRolling;
+    private float rollSpeed = 30f;
+    private float rollDuration = 0.55f;
+    private float rollCooldown = 3f;
 
+    [SerializeField] 
     private bool isAlive => GameManager.instance.isLive;
 
     private void Awake()
@@ -30,17 +37,20 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        if (!isAlive)
+        
+        if (!isAlive || isRolling)
             return;
         inputVec.x = Input.GetAxisRaw("Horizontal");
         inputVec.y = Input.GetAxisRaw("Vertical");
         animator.SetFloat("run", inputVec.magnitude);
         Debug.Log("inputVec: " + inputVec);
+
+        HandleRoll();
     }
 
     private void FixedUpdate()
     {
-        if (!isAlive)
+        if (!isAlive || isRolling)
             return;
 
         Vector2 nextVec = inputVec.normalized * speed * Time.fixedDeltaTime;
@@ -55,10 +65,38 @@ public class Player : MonoBehaviour
             animator.SetBool("isRoll", false);
         }
     }
-    IEnumerator Roll()
+    public void HandleRoll()
     {
-        animator.SetBool("isRoll",true);
-        yield return new WaitForSeconds(0.5f);
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            animator.SetTrigger("roll");
+            StartCoroutine(Roll());
+        }
+    }
+    private IEnumerator Roll()
+    {
+        Vector2 moveDirection = new Vector2(inputVec.x, inputVec.y).normalized;
+
+     
+        if (moveDirection == Vector2.zero)
+            yield break;
+
+        canRoll = false;
+        isRolling = true;
+
+        float originalGravity = rigid.gravityScale;
+        rigid.gravityScale = 0f;
+
+        
+        rigid.linearVelocity = moveDirection * rollSpeed;
+
+        yield return new WaitForSeconds(rollDuration);
+
+        rigid.linearVelocity = Vector2.zero;
+        rigid.gravityScale = originalGravity;
+        isRolling = false;
+        yield return new WaitForSeconds(rollCooldown);
+        canRoll = true;
     }
 
     private void LateUpdate()
@@ -76,14 +114,15 @@ public class Player : MonoBehaviour
     {
         if (!isAlive)
             return;
-
-        if (Health > 0)
+        if (isRolling)
         {
-            Health -= Time.deltaTime * 10;
+            Health -= Time.deltaTime * damegeTaken * 0.3f;
         }
-
-        if (Health <= 0)
+        else if (Health > 0)
         {
+            Health -= Time.deltaTime * damegeTaken;
+        }
+        if (Health <= 0){
             for (int i = 2; i < transform.childCount; i++) 
             { 
                 transform.GetChild(i).gameObject.SetActive(false);

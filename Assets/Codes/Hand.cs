@@ -7,8 +7,8 @@ public class Hand : MonoBehaviour
 
     SpriteRenderer player;
 
-    Vector3 rightPos = new Vector3(0.3f, -0.17f, 0);
-    Vector3 rightPosReverse = new Vector3(-0.17f, -0.17f, 0);
+    Vector3 rightPos = new Vector3(0.4f, -0.15f, 0);
+    Vector3 rightPosReverse = new Vector3(-0.4f, -0.12f, 0);
 
     private void Awake()
     {

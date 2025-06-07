@@ -140,6 +140,7 @@ public class Weapon : MonoBehaviour
         Transform bullet = GameManager.instance.pool.Get(prefabId).transform;
         bullet.position = transform.position;
         bullet.Rotate(0, 0, 90f);
+        bullet.localScale = new Vector3(1f, 1f, 0f);
         bullet.rotation = Quaternion.FromToRotation(Vector3.up, dir);
         bullet.GetComponent<Bullet>().Init(damage, count, dir);
         AudioManager.instance.sfx(0);
