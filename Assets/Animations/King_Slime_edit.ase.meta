@@ -341,7 +341,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 570
-      y: 211
+      y: 210
       width: 180
       height: 196
     spriteID: 66871876c2bc6a2458b73a9ba35b3eec
@@ -352,10 +352,10 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 570, y: 211}
+    uvTransform: {x: 570, y: 210}
   - name: Frame_3
     originalName: 
-    pivot: {x: 1.8888888, y: -0.5}
+    pivot: {x: 1.8888888, y: -0.24}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -376,7 +376,7 @@ ScriptedImporter:
     uvTransform: {x: 192, y: 212}
   - name: Frame_10
     originalName: 
-    pivot: {x: 1.8888888, y: -0.96482414}
+    pivot: {x: 1.8888888, y: -1.0202019}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -385,7 +385,7 @@ ScriptedImporter:
       x: 570
       y: 4
       width: 180
-      height: 199
+      height: 198
     spriteID: 06d7667c86cf79f47ab58e2b1035f830
     spriteBone: []
     spriteOutline: []
@@ -397,7 +397,7 @@ ScriptedImporter:
     uvTransform: {x: 570, y: 4}
   - name: Frame_11
     originalName: 
-    pivot: {x: 1.8888888, y: -0.5}
+    pivot: {x: 1.8888888, y: -0.42}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -418,7 +418,7 @@ ScriptedImporter:
     uvTransform: {x: 192, y: 420}
   - name: Frame_0
     originalName: 
-    pivot: {x: 1.8888888, y: -0.57142854}
+    pivot: {x: 1.8999999, y: -0.47619048}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -613,7 +613,7 @@ ScriptedImporter:
       additiveSortOrder: 0
       cellRect:
         x: 100
-        y: 100
+        y: 48
         width: 180
         height: 200
       spriteId: 73cd2b9953316814bbf096ccb1548c7c
@@ -622,16 +622,16 @@ ScriptedImporter:
       additiveSortOrder: 0
       cellRect:
         x: 100
-        y: 192
+        y: 202
         width: 180
-        height: 199
+        height: 198
       spriteId: 06d7667c86cf79f47ab58e2b1035f830
     - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
         x: 100
-        y: 100
+        y: 84
         width: 180
         height: 200
       spriteId: ce0ff2f17d5e38342a3dbf0b43347527
@@ -639,8 +639,8 @@ ScriptedImporter:
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
-        x: 100
-        y: 96
+        x: 98
+        y: 80
         width: 180
         height: 168
       spriteId: f7bc7958c4dc88f46981c9413de5c05c
