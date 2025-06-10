@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemType: 1
   itemId: 1
-  itemName: "\u0110\u1EA1n H\u1EE7y Di\u1EC7t"
+  itemName: "Phi ti\xEAu"
   itemDesc: "+{0}% S\xE1t Th\u01B0\u01A1ng"
-  itemIcon: {fileID: -1002307068, guid: d71a3dc7aa20fad4f9a99fc76a9254ba, type: 3}
+  itemIcon: {fileID: -8384295599829213364, guid: 14c0f5037921fb24e9a06e729772f293, type: 3}
   baseDamage: 5
   baseCount: 1
   damages:

@@ -117,9 +117,9 @@ public class Weapon : MonoBehaviour
             bullet.parent = transform;
             bullet.localPosition = Vector3.zero;
             bullet.localRotation = Quaternion.identity;
-            Vector3 rotVec = Vector3.forward * 360 * i / count;
+            Vector3 rotVec = new Vector3(0f,0f,-1f) * 360 * i / count;
             bullet.Rotate(rotVec);
-            bullet.Translate(bullet.up * 3f, Space.World);
+            bullet.Translate(bullet.up * 4f, Space.World);
 
             bullet.GetComponent<Bullet>().Init(damage, -1, Vector3.zero);
         }
@@ -131,10 +131,8 @@ public class Weapon : MonoBehaviour
             return;
         }
         Vector3 targetPos = player.scanner.nearestTarget.position;
-        Vector2 mousePos = Input.mousePosition;
-        Vector2 targetPos1 = Camera.main.ScreenToWorldPoint(new Vector2(mousePos.x, mousePos.y));
-        Debug.Log("Target Position in weapon: " + targetPos1);
-        Vector2 dir = targetPos1 - (Vector2)transform.position;
+        Debug.Log("Target Position in weapon: " + targetPos);
+        Vector3 dir = targetPos - transform.position;
         dir = dir.normalized;
 
         Transform bullet = GameManager.instance.pool.Get(prefabId).transform;

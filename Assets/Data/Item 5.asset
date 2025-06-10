@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemType: 1
   itemId: 2
-  itemName: "Phi ti\xEAu "
-  itemDesc: "Phi ti\xEAu kh\xF4ng th\u1EC3 b\u1ECB ng\u0103n c\u1EA3n"
-  itemIcon: {fileID: -6795786608348309970, guid: 94c094ae2927a67448d22eddb0c9927d, type: 3}
+  itemName: "R\xECu chi\u1EBFn"
+  itemDesc: "R\xECu chi\u1EBFn kh\xF4ng th\u1EC3 b\u1ECB ng\u0103n c\u1EA3n"
+  itemIcon: {fileID: 4942747972377302347, guid: 444004ed4dbb6df449011b012cea96aa, type: 3}
   baseDamage: 40
   baseCount: 50
   damages:

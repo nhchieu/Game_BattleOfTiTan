@@ -16,10 +16,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] public PoolManager pool;
     [SerializeField] public Player player;
     [SerializeField] public Enemy enemy;
+    [SerializeField] public FinalBoss boss;
     [SerializeField] public LevelUp uilevelUp;
     [SerializeField] public Result uiResult;
     [SerializeField] public GameObject ClearEnemy;
-    [SerializeField] public GameObject targetPrefab;
     [SerializeField] public Spawner Spawner;
     [SerializeField] public Animator transitionAnim;
     [SerializeField] public GameObject gate;
@@ -43,10 +43,6 @@ public class GameManager : MonoBehaviour
     }
     private void Update()
     {
-        Vector2 mousePos = Input.mousePosition;
-        mousePos = Camera.main.ScreenToWorldPoint(new Vector2(mousePos.x, mousePos.y));
-        targetPrefab.transform.position = mousePos;
-        
         if (!isLive)
         {
             return;
@@ -63,15 +59,22 @@ public class GameManager : MonoBehaviour
             {
                 return;
             }
-            GameWin();
+            showGate();
         }
         //them 2 dieu kien de test game
-        if (Input.GetMouseButtonDown(1)) {
-            Time.timeScale = 2;
-        }
+      
         if (Input.GetMouseButtonDown(2)) {
             Time.timeScale = 1;
         }
+    }
+    public void showGate()
+    {
+        isTest = true;
+        Vector2 v2 = (Vector2)player.transform.position;
+        Vector2 gateOffset = new Vector2(0, 7f);
+        Vector2 gatePosition = v2 + gateOffset;
+        gate.transform.position = gatePosition;
+        gate.SetActive(true);
     }
     public void GetExp()
     {
@@ -106,31 +109,32 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
         AudioManager.instance.BgmOn(1, bgmBattleVolume);
     }
-    public void NextScreen()
-    {
-        Vector2 v2 = new Vector3(10003, 9982);
-        player.transform.position = v2;
-        StartCoroutine(LoadScene());  
-    }
+    
     public void GameRetry()
     {
         SceneManager.LoadScene(0);
+    }
+   
+    
+    public void GameWin()
+    {
+        StartCoroutine(GameWinRoutine());
+    }
+    IEnumerator GameWinRoutine()
+    {
+        yield return new WaitForSeconds(3f);
+        uiResult.gameObject.SetActive(true);
+        uiResult.Win();
+        AudioManager.instance.sfx(5);
+        AudioManager.instance.PauseMusic();
+        Stop();
+        yield return new WaitForSeconds(1f);
+        transitionAnim.SetTrigger("end");
     }
     public void GameOver()
     {
         StartCoroutine(GameOverRoutine());
     }
-    public void GameWin()
-    {
-        isTest=true;
-        Vector2 v2 = (Vector2)player.transform.position;
-        Vector2 gateOffset = new Vector2(0, 7f);
-        Vector2 gatePosition = v2 + gateOffset;
-        gate.transform.position = gatePosition;
-        gate.SetActive(true);
-        //StartCoroutine(GameWinRoutine());
-    }
-
     IEnumerator GameOverRoutine()
     {
         yield return new WaitForSeconds(0.5f);
@@ -142,20 +146,17 @@ public class GameManager : MonoBehaviour
         AudioManager.instance.PauseMusic();
         Stop();
     }
-    IEnumerator LoadScene()
+    public void NextScreen()
+    {
+        Vector2 v2 = new Vector3(9982, 10000);
+        player.transform.position = v2;
+        StartCoroutine(LoadScreen());
+    }
+    IEnumerator LoadScreen()
     {
         transitionAnim.SetTrigger("end");
         yield return new WaitForSeconds(2.5f);
         transitionAnim.SetTrigger("start");
-    }
-    IEnumerator GameWinRoutine()
-    {
-        yield return new WaitForSeconds(3f);
-        uiResult.gameObject.SetActive(true);
-        uiResult.Win();
-        AudioManager.instance.sfx(5);
-        AudioManager.instance.PauseMusic();
-        Stop();
     }
     public void QuitGame()
     {
