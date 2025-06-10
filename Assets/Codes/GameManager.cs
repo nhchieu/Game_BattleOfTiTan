@@ -63,8 +63,8 @@ public class GameManager : MonoBehaviour
         }
         //them 2 dieu kien de test game
       
-        if (Input.GetMouseButtonDown(2)) {
-            Time.timeScale = 1;
+        if (Input.GetMouseButtonDown(1)) {
+            Time.timeScale = 2;
         }
     }
     public void showGate()

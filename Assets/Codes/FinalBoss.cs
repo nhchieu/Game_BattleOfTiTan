@@ -1,17 +1,18 @@
+using System.Collections;
 using System.ComponentModel;
 using UnityEngine;
 
 public class FinalBoss : MonoBehaviour
 {
     public float health = 100f;
-    public float speed = 5f;
+    public float speed = 25f;
     bool isLive = true;
-    public Transform target;
+    public Rigidbody2D target;
     SpriteRenderer spriter;
-    [SerializeField] Animator animator;
-    private Rigidbody2D rigid;
+    Animator animator;
+    Rigidbody2D rigid;
     Collider2D coll;
-    Scanner scanner;
+    
 
     private void Awake()
     {
@@ -19,7 +20,12 @@ public class FinalBoss : MonoBehaviour
         spriter = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         coll = GetComponent<Collider2D>();
-        target = GetComponentInParent<Scanner>().nearestTarget;
+        
+        
+    }
+    private void OnEnable()
+    {
+        target = GameManager.instance.player.GetComponent<Rigidbody2D>();
     }
 
 
@@ -30,23 +36,64 @@ public class FinalBoss : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (!GameManager.instance.isLive)
+        if (!GameManager.instance.isLive || !isLive)
             return;
-
-        Vector2 dirVec = (Vector2)target.position - rigid.position;
+        
+        Vector2 dirVec = target.position - rigid.position;
 
         Vector2 nextVec = dirVec.normalized * speed * Time.deltaTime;
 
         rigid.MovePosition(rigid.position + nextVec);
 
-
+        if (!isLive || animator.GetCurrentAnimatorStateInfo(0).IsName("bosshit"))
+        {
+            return;
+        }
     }
 
     private void LateUpdate()
     {
-        if (!GameManager.instance.isLive)
-            return;
+        //if (!GameManager.instance.isLive)
+        //    return;
 
-        spriter.flipX = target.position.x < rigid.position.x;
+        //spriter.flipX = target.position.x < rigid.position.x;
     }
+
+    //private void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    if (!collision.CompareTag("Bullet") || !isLive)
+    //    {
+    //        return;
+    //    }
+        
+
+    //    health -= collision.GetComponent<Bullet>().damage;
+    //    //HUD
+    //    GameManager.instance.Spawner.Hp -= collision.GetComponent<Bullet>().damage;
+
+    //    if (health > 0)
+    //    {
+    //        animator.SetTrigger("bosshit");
+    //    }
+    //    else
+    //    {
+    //        isLive = false;
+    //        coll.enabled = false;
+    //        rigid.simulated = false;
+    //        spriter.sortingOrder = 1;
+    //        animator.SetBool("bossdead", true);
+    //        StartCoroutine(Dead());
+    //        GameManager.instance.kill++;
+    //        GameManager.instance.GetExp();
+    //        AudioManager.instance.sfx(1);
+    //    }
+    //}
+    IEnumerator Dead()
+    {
+        yield return new WaitForSeconds(2f);
+        gameObject.SetActive(false);
+        GameManager.instance.GameWin();
+
+    }
+
 }

@@ -16,7 +16,7 @@ MonoBehaviour:
   itemId: 2
   itemName: "R\xECu chi\u1EBFn"
   itemDesc: "R\xECu chi\u1EBFn kh\xF4ng th\u1EC3 b\u1ECB ng\u0103n c\u1EA3n"
-  itemIcon: {fileID: 4942747972377302347, guid: 444004ed4dbb6df449011b012cea96aa, type: 3}
+  itemIcon: {fileID: 4800493578679982308, guid: 6ca0638febf2cd44eb43d1ee59f76769, type: 3}
   baseDamage: 40
   baseCount: 50
   damages:
