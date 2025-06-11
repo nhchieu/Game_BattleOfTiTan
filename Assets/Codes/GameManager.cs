@@ -157,6 +157,7 @@ public class GameManager : MonoBehaviour
         transitionAnim.SetTrigger("end");
         yield return new WaitForSeconds(2.5f);
         transitionAnim.SetTrigger("start");
+        boss.HealthBar.gameObject.SetActive(true);
     }
     public void QuitGame()
     {

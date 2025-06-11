@@ -55,15 +55,6 @@ public class Player : MonoBehaviour
 
         Vector2 nextVec = inputVec.normalized * speed * Time.fixedDeltaTime;
         rigid.MovePosition(rigid.position + nextVec);
-
-        if (Input.GetMouseButtonDown(2)) 
-        {
-            Vector2 mousePos = Input.mousePosition;
-            StartCoroutine(Roll());
-            Vector2 rollDirection = (mousePos - (Vector2)transform.position).normalized * 20 * Time.fixedDeltaTime;
-            rigid.MovePosition(rigid.position + rollDirection);
-            animator.SetBool("isRoll", false);
-        }
     }
     public void HandleRoll()
     {

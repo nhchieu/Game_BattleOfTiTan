@@ -5,7 +5,7 @@ public class Spawner : MonoBehaviour
 {
     public Transform[] spawPoint;
     public SpawnData[] spawnData;
-    public GameObject HealthBar;
+    
     [SerializeField]float time=0;
     public int level;
     public float Hp;
@@ -46,7 +46,7 @@ public class Spawner : MonoBehaviour
             spawnData[level].spawnTime = 10000;
             //HUD
             Hp = enemy1.GetComponent<Enemy>().health;
-            HealthBar.SetActive(true);
+            
         }
 
     }
