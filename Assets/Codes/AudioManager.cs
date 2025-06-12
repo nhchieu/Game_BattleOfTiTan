@@ -45,7 +45,7 @@ public class AudioManager : MonoBehaviour
 
         bgmPlayer.clip = bgmClip[a];
         bgmPlayer.volume = b;
-        Debug.Log(bgmPlayer.volume);
+        
         bgmPlayer.Play();
     }
 

@@ -7,13 +7,21 @@ public class FinalBoss : MonoBehaviour
     public float health = 5000f;
     public float speed = 15f;
     bool isLive = true;
+    bool isfalling = false;
+    bool isfire = false;
     public Rigidbody2D target;
     SpriteRenderer spriter;
     Animator animator;
     Rigidbody2D rigid;
     Collider2D coll;
     Scanner scanner;
+    float fireTime = 5f;
+    float timer = 0f;
+    public GameObject rod;
     public GameObject HealthBar;
+    public GameObject FallObject;
+    public Rigidbody2D SlimeBall;
+    public Rigidbody2D RigidFallObject;
 
 
     private void Awake()
@@ -28,6 +36,7 @@ public class FinalBoss : MonoBehaviour
     private void OnEnable()
     {
         target = GameManager.instance.player.GetComponent<Rigidbody2D>();
+        
     }
     void Update()
     {
@@ -40,8 +49,8 @@ public class FinalBoss : MonoBehaviour
     {
         if (!GameManager.instance.isLive || !isLive)
             return;
-        Vector2 playerPos = scanner.nearestTarget.position;
 
+        Vector2 playerPos = scanner.nearestTarget.position;
         Vector2 dirVec = playerPos - rigid.position;
 
         Vector2 nextVec = dirVec.normalized * speed * Time.deltaTime;
@@ -51,8 +60,36 @@ public class FinalBoss : MonoBehaviour
         if (health <= 2500f)
         {
             animator.SetFloat("bossJump", dirVec.magnitude);
+            if (isfalling)
+                return;
+            isfalling = true;
+            FallObject.SetActive(true);
+            Vector2 spawnPosFalling = playerPos + Vector2.up * 10f;
+            Debug.Log("Spawn Position: " + spawnPosFalling);
+            FallObject.transform.position = spawnPosFalling;
+            StartCoroutine(Falling());
 
         }
+
+        if (health <= 1500f)
+        {
+            animator.SetFloat("bossJump", 1);
+            if (isfire)
+                return;
+            isfire = true;  
+            rod.SetActive(true);
+            transform.position = new Vector2(9983, 10020);
+            rigid.linearVelocity = Vector2.zero;
+            Vector2 playerDir = playerPos - rigid.position;
+            
+            timer += Time.deltaTime;
+            if (timer >= fireTime)
+            {
+                timer = 0f;
+                Shoot(playerDir);
+            }
+        }
+
 
     }
     private void LateUpdate()
@@ -61,6 +98,25 @@ public class FinalBoss : MonoBehaviour
             return;
 
         spriter.flipX = target.position.x < rigid.position.x;
+    }
+
+    void Phase2(Vector2 playerPos)
+    {
+        
+    }
+    
+    void Shoot(Vector2 PlayerDir)
+    {
+       SlimeBall.linearVelocity=PlayerDir.normalized * 20f;
+        isfire = false;
+    }
+    IEnumerator Falling()
+    {
+        yield return new WaitForSeconds(1f);
+        RigidFallObject.gravityScale = 2f;
+        yield return new WaitForSeconds(2f);
+        FallObject.SetActive(false);
+        isfalling = false;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

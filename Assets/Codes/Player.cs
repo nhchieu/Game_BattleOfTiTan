@@ -43,7 +43,7 @@ public class Player : MonoBehaviour
         inputVec.x = Input.GetAxisRaw("Horizontal");
         inputVec.y = Input.GetAxisRaw("Vertical");
         animator.SetFloat("run", inputVec.magnitude);
-        Debug.Log("inputVec: " + inputVec);
+        
 
         HandleRoll();
     }
@@ -75,16 +75,12 @@ public class Player : MonoBehaviour
         canRoll = false;
         isRolling = true;
 
-        float originalGravity = rigid.gravityScale;
-        rigid.gravityScale = 0f;
 
-        
         rigid.linearVelocity = moveDirection * rollSpeed;
 
         yield return new WaitForSeconds(rollDuration);
 
         rigid.linearVelocity = Vector2.zero;
-        rigid.gravityScale = originalGravity;
         isRolling = false;
         yield return new WaitForSeconds(rollCooldown);
         canRoll = true;

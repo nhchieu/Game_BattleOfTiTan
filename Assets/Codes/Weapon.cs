@@ -131,7 +131,7 @@ public class Weapon : MonoBehaviour
             return;
         }
         Vector3 targetPos = player.scanner.nearestTarget.position;
-        Debug.Log("Target Position in weapon: " + targetPos);
+        
         Vector3 dir = targetPos - transform.position;
         dir = dir.normalized;
 
