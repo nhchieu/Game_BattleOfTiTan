@@ -47,7 +47,6 @@ public class Player : MonoBehaviour
 
         HandleRoll();
     }
-
     private void FixedUpdate()
     {
         if (!isAlive || isRolling)
@@ -55,6 +54,16 @@ public class Player : MonoBehaviour
 
         Vector2 nextVec = inputVec.normalized * speed * Time.fixedDeltaTime;
         rigid.MovePosition(rigid.position + nextVec);
+    }
+    private void LateUpdate()
+    {
+        if (!isAlive)
+            return;
+
+        if (inputVec.x != 0)
+        {
+            spriter.flipX = inputVec.x < 0;
+        }
     }
     public void HandleRoll()
     {
@@ -84,17 +93,6 @@ public class Player : MonoBehaviour
         isRolling = false;
         yield return new WaitForSeconds(rollCooldown);
         canRoll = true;
-    }
-
-    private void LateUpdate()
-    {
-        if (!isAlive)
-            return;
-
-        if (inputVec.x != 0) 
-        {
-            spriter.flipX = inputVec.x < 0;
-        }
     }
 
     private void OnCollisionStay2D(Collision2D collision)

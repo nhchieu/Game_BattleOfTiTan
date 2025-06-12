@@ -1,5 +1,6 @@
 using System.Collections;
 using System.ComponentModel;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class FinalBoss : MonoBehaviour
@@ -15,6 +16,7 @@ public class FinalBoss : MonoBehaviour
     Rigidbody2D rigid;
     Collider2D coll;
     Scanner scanner;
+    Transform nearestTarget;
     float fireTime = 5f;
     float timer = 0f;
     public GameObject rod;
@@ -22,7 +24,7 @@ public class FinalBoss : MonoBehaviour
     public GameObject FallObject;
     public Rigidbody2D SlimeBall;
     public Rigidbody2D RigidFallObject;
-
+    Vector2 playerPos = new Vector2(0, 0);
 
     private void Awake()
     {
@@ -30,8 +32,9 @@ public class FinalBoss : MonoBehaviour
         spriter = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         coll = GetComponent<Collider2D>();
-        scanner = GetComponent<Scanner>();
-
+        nearestTarget = GetComponent<Scanner>().nearestTarget;
+        playerPos =nearestTarget.position;
+        Debug.Log("Player Position: " + playerPos);
     }
     private void OnEnable()
     {
@@ -50,7 +53,7 @@ public class FinalBoss : MonoBehaviour
         if (!GameManager.instance.isLive || !isLive)
             return;
 
-        Vector2 playerPos = scanner.nearestTarget.position;
+        
         Vector2 dirVec = playerPos - rigid.position;
 
         Vector2 nextVec = dirVec.normalized * speed * Time.deltaTime;
@@ -92,13 +95,7 @@ public class FinalBoss : MonoBehaviour
 
 
     }
-    private void LateUpdate()
-    {
-        if (!GameManager.instance.isLive)
-            return;
-
-        spriter.flipX = target.position.x < rigid.position.x;
-    }
+   
 
     void Phase2(Vector2 playerPos)
     {
